@@ -1,0 +1,149 @@
+/* importa as fontes que serão usadas no projeto*/
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+/* criação de variáveis de elementos que se repetem no código*/
+:root {
+    --cor-primaria: #000000; /* #2C3639;  #0F0E0E; */
+    --cor-secundaria: #F6F6F6; /* #EEEEEE; #DCD7C9;  */
+    --cor-terciaria: #22D4F4; /* #8B9A46;  #A27B5C; */
+    --cor-hover: #272727; /* #541212;  #3F4E4F; */
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 15%; /* ordem do padding sup dir inf esq*/
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link {
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    color:var(--cor-terciaria);
+    text-decoration: none;
+}
+
+.cabecalho__menu__link:hover {
+    background-color: var(--cor-hover);
+    color: var(--cor-secundaria);
+}
+
+.apresentacao {
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.apresentacao__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria);
+}
+
+.titulo-destaque {
+    color: var(--cor-terciaria);
+}
+
+.apresentacao__conteudo__parag {
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao__links__subtitulo {
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: var(--fonte-primaria);
+}
+
+.apresentacao__links__btn {
+    display: flex; /*para alinhar elementos do btn*/
+    justify-content: center; /* centraliza elementos*/
+    gap: 16px; /* espaço entre texto e logo*/
+    border: 5PX double var(--cor-terciaria);
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__imagem {
+    width: 50%;
+}
+
+/* estiliza botao qdo mouse passa pelo botao*/
+.apresentacao__links__btn:hover {
+    background-color: var(--cor-hover);
+    padding: 3%; /* expande o botao*/
+}
+
+body {
+    /* height: 100vh; */
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.rodape {
+    padding: 24px 0;
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 400;
+    font-family: var(--fonte-secundaria);
+}
+
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 3%;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+    /*    width: auto;*/
+        width:fit-content;
+    }
+
+}
